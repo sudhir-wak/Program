@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+struct Student {
+    int roll;
+    char name[20];
+    float marks;
+};
+
+int main() {
+    struct Student s[3] = {
+        {1, "Amit", 85.5},
+        {2, "Ravi", 72.0},
+        {3, "Priya", 90.0}
+    };
+
+    int i;
+
+    printf("Student Result List:\n");
+
+    for (i = 0; i < 3; i++) {
+        printf("\nRoll No: %d", s[i].roll);
+        printf("\nName   : %s", s[i].name);
+        printf("\nMarks  : %.2f", s[i].marks);
+
+        if (s[i].marks >= 40)
+            printf("\nResult : Pass\n");
+        else
+            printf("\nResult : Fail\n");
+    }
+
+    return 0;
+}
